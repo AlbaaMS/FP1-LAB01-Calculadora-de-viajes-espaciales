@@ -1,15 +1,15 @@
-continuar = ""
-def viaje ():
-    distancia = float(input("dime la distancia"))
-    velocidad = float(input("dime la velocidad"))
+
+def viaje():
+    distancia = float(input("Dime la distancia: "))
+    velocidad = float(input("Dime la velocidad: "))
     tiempo_horas = distancia / velocidad
     tiempo_dias = tiempo_horas / 24
-    print(f"Tardarías {tiempo_dias} días en llegar.")
-    continuar = input("¿Quieres hacer otra simulación? (s/n)")
-    return viaje()
-viaje ()
+    print(f"Tardarías {tiempo_dias:.2f} días en llegar.\n")
+
+continuar = "s"
+
 while continuar == "s":
-    if continuar != "s":
-        break
-    else:
-        viaje()
+    viaje()
+    continuar = input("¿Quieres hacer otra simulación? (s/n): ")
+
+print("¡Gracias por usar el simulador!")
